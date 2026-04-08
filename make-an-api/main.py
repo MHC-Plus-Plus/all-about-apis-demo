@@ -8,7 +8,6 @@ data = {}
 
 @app.post("/ip/{ip}")
 def create_code(ip: str):
-    # Generate a simple 4-letter code
     code = "".join(random.choices(string.ascii_lowercase, k=5))
 
     data[code] = ip
